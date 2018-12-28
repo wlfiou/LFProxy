@@ -13,7 +13,7 @@
 @end
 @implementation LFProxy
 +(instancetype)ProxyWithObj:(NSObject *)obj{
-    LFProxy *proxy = [LFProxy alloc];
+    LFProxy *proxy = [self alloc];
     proxy.innerObject = obj;
     return proxy;
 }
@@ -29,7 +29,7 @@
         NSLog(@"before calling %@",selectorName);
         //把包括target sel 参数 都retain一遍
         [invocation retainArguments];
-        
+
         NSMethodSignature *sig = [invocation methodSignature];
         NSUInteger cnt = [sig numberOfArguments];
         for (int i =0; i<cnt; i++) {
@@ -37,25 +37,25 @@
             if(strcmp(type, "@") == 0){
                 NSObject *obj;
                 [invocation getArgument:&obj atIndex:i];
-                //这里输出的是："parameter (0)'class is MyProxy"
+                //这里输出的是："parameter (0)'class is LFProxy"
                 //也证明了这是objc_msgSend的第一个参数
                 NSLog(@"parameter (%d)'class is %@",i,[obj class]);
             }
-            else if(strcmp(type, ":") == 0){
+             if(strcmp(type, ":") == 0){
                 SEL sel;
                 [invocation getArgument:&sel atIndex:i];
                 //这里输出的是:"parameter (1) is barking:"
                 //也就是objc_msgSend的第二个参数
                 NSLog(@"parameter (%d) is %@",i,NSStringFromSelector(sel));
             }
-            else if(strcmp(type, "q") == 0){
+             if(strcmp(type, "q") == 0){
                 int arg = 0;
                 [invocation getArgument:&arg atIndex:i];
                 //这里输出的是:"parameter (2) is int value is 4"
                 //稍后会看到我们再调用barking的时候传递的参数就是4
                 NSLog(@"parameter (%d) is int value is %d",i,arg);
             }
-            
+
         }
         [invocation invokeWithTarget:_innerObject];
         const char *retype = [sig methodReturnType];

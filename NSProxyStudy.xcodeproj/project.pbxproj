@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0DB14FB21D4AD6E00859629 /* classA.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB14FA21D4AD6E00859629 /* classA.m */; };
+		D0DB14FE21D4AD7C00859629 /* classB.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB14FD21D4AD7C00859629 /* classB.m */; };
+		D0DB150121D4ADAD00859629 /* ClassProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB150021D4ADAD00859629 /* ClassProxy.m */; };
+		D0DB150421D4C25B00859629 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB150321D4C25B00859629 /* WeakProxy.m */; };
+		D0DB150721D4C2D100859629 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB150621D4C2D100859629 /* SecondViewController.m */; };
+		D0DB150B21D5C6D700859629 /* AOPProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB150A21D5C6D700859629 /* AOPProxy.m */; };
 		D0E4368021AA452D004DA315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E4367F21AA452D004DA315 /* AppDelegate.m */; };
 		D0E4368321AA452D004DA315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E4368221AA452D004DA315 /* ViewController.m */; };
 		D0E4368621AA452D004DA315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E4368421AA452D004DA315 /* Main.storyboard */; };
@@ -37,6 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0DB14F921D4AD6E00859629 /* classA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = classA.h; sourceTree = "<group>"; };
+		D0DB14FA21D4AD6E00859629 /* classA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classA.m; sourceTree = "<group>"; };
+		D0DB14FC21D4AD7C00859629 /* classB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = classB.h; sourceTree = "<group>"; };
+		D0DB14FD21D4AD7C00859629 /* classB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = classB.m; sourceTree = "<group>"; };
+		D0DB14FF21D4ADAD00859629 /* ClassProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassProxy.h; sourceTree = "<group>"; };
+		D0DB150021D4ADAD00859629 /* ClassProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassProxy.m; sourceTree = "<group>"; };
+		D0DB150221D4C25B00859629 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		D0DB150321D4C25B00859629 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
+		D0DB150521D4C2D100859629 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D0DB150621D4C2D100859629 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D0DB150921D5C6D700859629 /* AOPProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOPProxy.h; sourceTree = "<group>"; };
+		D0DB150A21D5C6D700859629 /* AOPProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPProxy.m; sourceTree = "<group>"; };
 		D0E4367B21AA452D004DA315 /* NSProxyStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSProxyStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E4367E21AA452D004DA315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0E4367F21AA452D004DA315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +102,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0DB14F721D49DA200859629 /* 多继承 */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB14F921D4AD6E00859629 /* classA.h */,
+				D0DB14FA21D4AD6E00859629 /* classA.m */,
+				D0DB14FC21D4AD7C00859629 /* classB.h */,
+				D0DB14FD21D4AD7C00859629 /* classB.m */,
+				D0DB14FF21D4ADAD00859629 /* ClassProxy.h */,
+				D0DB150021D4ADAD00859629 /* ClassProxy.m */,
+			);
+			path = "多继承";
+			sourceTree = "<group>";
+		};
+		D0DB14F821D49DB200859629 /* 破坏循环引用 */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB150221D4C25B00859629 /* WeakProxy.h */,
+				D0DB150321D4C25B00859629 /* WeakProxy.m */,
+				D0DB150521D4C2D100859629 /* SecondViewController.h */,
+				D0DB150621D4C2D100859629 /* SecondViewController.m */,
+			);
+			path = "破坏循环引用";
+			sourceTree = "<group>";
+		};
+		D0DB150821D5B1B400859629 /* AOP */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB150921D5C6D700859629 /* AOPProxy.h */,
+				D0DB150A21D5C6D700859629 /* AOPProxy.m */,
+			);
+			name = AOP;
+			sourceTree = "<group>";
+		};
 		D0E4367221AA452D004DA315 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +158,9 @@
 		D0E4367D21AA452D004DA315 /* NSProxyStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D0DB150821D5B1B400859629 /* AOP */,
+				D0DB14F821D49DB200859629 /* 破坏循环引用 */,
+				D0DB14F721D49DA200859629 /* 多继承 */,
 				D0E4367E21AA452D004DA315 /* AppDelegate.h */,
 				D0E4367F21AA452D004DA315 /* AppDelegate.m */,
 				D0E4368121AA452D004DA315 /* ViewController.h */,
@@ -275,11 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DB150B21D5C6D700859629 /* AOPProxy.m in Sources */,
+				D0DB150721D4C2D100859629 /* SecondViewController.m in Sources */,
+				D0DB14FE21D4AD7C00859629 /* classB.m in Sources */,
+				D0DB14FB21D4AD6E00859629 /* classA.m in Sources */,
 				D0E436B221AA455B004DA315 /* LFProxy.m in Sources */,
 				D0E4368321AA452D004DA315 /* ViewController.m in Sources */,
 				D0E436B521AA4717004DA315 /* Dog.m in Sources */,
 				D0E4368E21AA452D004DA315 /* main.m in Sources */,
+				D0DB150421D4C25B00859629 /* WeakProxy.m in Sources */,
 				D0E4368021AA452D004DA315 /* AppDelegate.m in Sources */,
+				D0DB150121D4ADAD00859629 /* ClassProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
